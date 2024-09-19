@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amortization Schedule Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Amortization Schedule Calculator</h1>
+        <div class="form-section">
+            <label for="loanAmount">Loan Amount:</label>
+            <input type="number" id="loanAmount" placeholder="Enter loan amount">
+
+            <label for="interestRate">Annual Interest Rate (%):</label>
+            <input type="number" id="interestRate" step="0.01" placeholder="Enter interest rate">
+
+            <label for="loanTerm">Loan Term (Years):</label>
+            <input type="number" id="loanTerm" placeholder="Enter loan term in years">
+
+            <button onclick="calculateAmortization()">Calculate</button>
+        </div>
+        
+        <div class="chart-section">
+            <canvas id="amortizationChart"></canvas>
+        </div>
+
+        <div class="schedule-section">
+            <table id="amortizationSchedule">
+                <thead>
+                    <tr>
+                        <th>Payment No.</th>
+                        <th>Principal</th>
+                        <th>Interest</th>
+                        <th>Total Payment</th>
+                        <th>Remaining Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Schedule rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
